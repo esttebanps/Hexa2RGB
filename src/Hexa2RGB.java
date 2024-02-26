@@ -3,6 +3,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Float.parseFloat;
+import static java.lang.Integer.*;
+import static java.lang.Math.round;
+
 public abstract class Hexa2RGB {
     public static String myLetters = "ABCDEF";
 
@@ -40,7 +44,14 @@ public abstract class Hexa2RGB {
         // rgb(19,255,19)
         rgbCode = rgbCode.substring(4, rgbCode.length()-1);
         String[] values = rgbCode.split(",");
-        return Arrays.toString(values);
+
+        for (String value : values) {
+            float result = parseFloat(value) / 255;
+            result *= 16;
+            int resultf = round(result);
+            System.out.println(result + " - " + resultf);
+        }
+        return "hola";
     };
 
     public static void main(String[] args) {
@@ -57,7 +68,7 @@ public abstract class Hexa2RGB {
             System.out.println("El codigo RGB para el Hexadecimal "+color+" es:");
             System.out.println(rgb);
         } else if(type == 2){
-            String hexa = Hexa2RGB.converter2hexadecimal("rgb(19,255,19)");
+            String hexa = Hexa2RGB.converter2hexadecimal("rgb(255,100,22)");
             System.out.println(hexa);
             System.out.println("Lo siento, esta opcion esta en desarrollo :(");
         }
