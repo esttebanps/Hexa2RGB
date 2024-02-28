@@ -1,18 +1,16 @@
+package esttebanps.converter;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 
-import static java.lang.Float.parseFloat;
-import static java.lang.Integer.*;
-import static java.lang.Math.round;
+import static esttebanps.converter.Validator.RgbValidate;
 
-public class Hexa2RGB extends ConverterColor{
+public class Hexa2RGB extends ConverterColor {
     public static boolean isLetter(char hexaCodeLetter) {
         return Character.isLetter(hexaCodeLetter);
     }
 
     public static String converter(String code, String myLetters) {
         code = code.substring(1,7);
+
         ArrayList<Integer> RGBCode = new ArrayList<>();
 
         for (int i = 0; i < code.length() - 1; i += 2) {

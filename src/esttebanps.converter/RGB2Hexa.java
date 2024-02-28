@@ -1,7 +1,6 @@
+package esttebanps.converter;
 import java.util.ArrayList;
 
-import static java.lang.Float.parseFloat;
-import static java.lang.Math.round;
 
 public class RGB2Hexa extends ConverterColor {
     static String converter(String code){
@@ -15,6 +14,6 @@ public class RGB2Hexa extends ConverterColor {
             String hexaValue = Integer.toHexString(parseValue);
             HexaCode.add(hexaValue);
         }
-        return "#"+HexaCode.get(0).toUpperCase()+HexaCode.get(1).toUpperCase()+HexaCode.get(2).toUpperCase();
+        return "#" + HexaCode.get(0).toUpperCase() + HexaCode.get(1).toUpperCase() + HexaCode.get(2).toUpperCase();
     };
 }
