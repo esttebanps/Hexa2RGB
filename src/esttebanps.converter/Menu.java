@@ -4,12 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static esttebanps.converter.Validator.hexaValidate;
-
+import static esttebanps.converter.Validator.rgbValidate;
 
 public class Menu {
     static Scanner sc = new Scanner(System.in);
 
-    public static void Run() {
+    public static void run() {
         int choice = 0;
 
         do {
@@ -34,17 +34,30 @@ public class Menu {
 
                 do {
                     if (valid) {
-                        System.out.println("Ingresa el color:");
+                        System.out.println("Ingresa el hexColor:");
                         valid = false;
                     }
-                    color = sc.nextLine();
+                    color = sc.nextLine().toUpperCase();
 
                 } while (!hexaValidate(color));
 
                 String rgb = Hexa2RGB.converter(color, Hexa2RGB.getMyLetters());
-                System.out.println("El codigo RGB para el Hexadecimal " + color+" es: " + rgb);
+                System.out.println("El codigo RGB para el Hexadecimal " + color + " es: " + rgb);
 
             case 2:
+                valid = true;
+                do {
+                    if (valid) {
+                        System.out.println("Ingresa el rgb:");
+                        valid = false;
+                    }
+                    color = sc.nextLine().toLowerCase();
+
+                } while (!rgbValidate(color));
+
+
+                String hexa = RGB2Hexa.converter(color);
+                System.out.println("El codigo Hexadecimal para el RGB " + color + " es: " + hexa);
         }
 
     }

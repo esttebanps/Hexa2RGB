@@ -1,15 +1,14 @@
 package esttebanps.converter;
+
 import java.util.ArrayList;
 
 import static esttebanps.converter.Validator.hexaValidate;
 
 public class Hexa2RGB extends ConverterColor {
-    public static boolean isLetter(char hexaCodeLetter) {
-        return Character.isLetter(hexaCodeLetter);
-    }
+
 
     public static String converter(String code, String myLetters) {
-        code = code.substring(1,7);
+        code = code.substring(1, 7);
 
         ArrayList<Integer> RGBCode = new ArrayList<>();
 
@@ -19,7 +18,7 @@ public class Hexa2RGB extends ConverterColor {
             //System.out.println(pair);
 
             for (int l = 0; l < pair.length(); l++) {
-                int value = Hexa2RGB.isLetter(pair.charAt(l))
+                int value = Validator.isLetter(pair.charAt(l))
                         ? (myLetters.indexOf(pair.charAt(l)) + 10) * 16
                         : Character.getNumericValue(pair.charAt(l)) * 16;
                 numbers.add(value);
