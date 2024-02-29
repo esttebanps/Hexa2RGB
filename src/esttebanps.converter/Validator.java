@@ -1,7 +1,5 @@
 package esttebanps.converter;
 
-import java.util.regex.Pattern;
-
 public class Validator {
 
     public static boolean isLetter(char code) {
@@ -15,6 +13,12 @@ public class Validator {
     // rgb(90,131,17)
     public static boolean rgbValidate(String code) {
         return code.matches("rgb\\(\\s*((?:[0-2]?[0-9])?[0-9])\\s*,\\s*((?:[0-2]?[0-9])?[0-9])\\s*,\\s*((?:[0-2]?[0-9])?[0-9])\\s*\\)$");
+    }
+
+    public static void isOptionValid(int choice){
+        if (choice < 1 || choice > 2) {
+            System.out.println("Opción inválida. Ingresa 1 o 2:");
+        }
     }
 }
 

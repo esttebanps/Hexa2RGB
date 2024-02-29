@@ -3,8 +3,7 @@ package esttebanps.converter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static esttebanps.converter.Validator.hexaValidate;
-import static esttebanps.converter.Validator.rgbValidate;
+import static esttebanps.converter.Validator.*;
 
 public class Menu {
     static Scanner sc = new Scanner(System.in);
@@ -21,10 +20,7 @@ public class Menu {
             } catch (InputMismatchException e) {
                 sc.nextLine();
             }
-
-            if (choice < 1 || choice > 2) {
-                System.out.println("Opción inválida. Ingresa 1 o 2:");
-            }
+            isOptionValid(choice);
         } while (choice < 1 || choice > 2);
 
         switch (choice) {
