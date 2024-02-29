@@ -1,7 +1,7 @@
 package esttebanps.converter;
 import java.util.ArrayList;
 
-import static esttebanps.converter.Validator.RgbValidate;
+import static esttebanps.converter.Validator.hexaValidate;
 
 public class Hexa2RGB extends ConverterColor {
     public static boolean isLetter(char hexaCodeLetter) {
