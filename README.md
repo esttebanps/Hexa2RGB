@@ -2,9 +2,9 @@
 ### Descripción
 Este proyecto te permite convertir entre códigos hexadecimales y valores RGB para colores.
 ### Funcionalidades
-Convertir un código hexadecimal a su valor RGB equivalente.
-Convertir un valor RGB a su código hexadecimal equivalente.
-Validación de la entrada para garantizar que sean formatos correctos.
+1. Convertir un código hexadecimal a su valor RGB equivalente.
+2. Convertir un valor RGB a su código hexadecimal equivalente.
+3. Validación de la entrada para garantizar que sean formatos correctos.
 ### Cómo usar
 1. Clona o descarga el proyecto.
 2. Ejecuta la clase Main.
