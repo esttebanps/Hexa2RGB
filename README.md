@@ -1,7 +1,7 @@
 ## Hexa2RGB - Conversor de colores Hexadecimales y RGB.
 ### Descripción
 Este proyecto te permite convertir entre códigos hexadecimales y valores RGB para colores.
-###Funcionalidades
+### Funcionalidades
 Convertir un código hexadecimal a su valor RGB equivalente.
 Convertir un valor RGB a su código hexadecimal equivalente.
 Validación de la entrada para garantizar que sean formatos correctos.
